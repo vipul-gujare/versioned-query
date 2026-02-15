@@ -1,0 +1,38 @@
+{
+  "name": "@vipulgujare/create-versioned-query",
+  "version": "1.0.0",
+  "description": "Factory for creating versioned query hooks - library agnostic",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "versioning",
+    "query",
+    "react",
+    "hooks",
+    "factory"
+  ],
+  "author": "Vipul Gujare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vipul-gujare/versioned-query.git",
+    "directory": "packages/create-versioned-query"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
