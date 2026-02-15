@@ -1,4 +1,48 @@
 {
-  "name": "tanstack-query-versioned-query",
-  "packageManager": "yarn@4.3.1"
+  "name": "@vipulgujare/tanstack-query-versioned-query",
+  "version": "1.0.0",
+  "description": "TanStack Query (React Query) versioned query hook for React (Web & Native)",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react-query",
+    "tanstack-query",
+    "react",
+    "react-native",
+    "versioning"
+  ],
+  "author": "Vipul Gujare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vipul-gujare/versioned-query.git",
+    "directory": "packages/tanstack-query-versioned-query"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^4.0.0 || ^5.0.0",
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "@vipulgujare/create-versioned-query": "workspace:*"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.90.21",
+    "@types/react": "^19.2.14",
+    "react": "^19.2.4",
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }

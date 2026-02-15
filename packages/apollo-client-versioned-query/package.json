@@ -1,4 +1,52 @@
 {
-  "name": "apollo-client-versioned-query",
-  "packageManager": "yarn@4.3.1"
+  "name": "@vipulgujare/apollo-client-versioned-query",
+  "version": "1.0.0",
+  "description": "Apollo Client versioned query hook for React (Web & Native)",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "apollo",
+    "graphql",
+    "react",
+    "react-native",
+    "versioning"
+  ],
+  "author": "Vipul Gujare",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vipul-gujare/versioned-query.git",
+    "directory": "packages/apollo-client-versioned-query"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "graphql": "*",
+    "react": "*",
+    "rxjs": "*"
+  },
+  "dependencies": {
+    "@vipulgujare/create-versioned-query": "workspace:*"
+  },
+  "devDependencies": {
+    "@apollo/client": "^4.1.4",
+    "@types/react": "^19.2.14",
+    "graphql": "^16.12.0",
+    "react": "^19.2.4",
+    "rxjs": "^7.8.2",
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
