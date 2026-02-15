@@ -873,8 +873,8 @@ __metadata:
     tsup: "npm:^8.0.0"
     typescript: "npm:^5.9.3"
   peerDependencies:
-    "@tanstack/react-query": ^4.0.0 || ^5.0.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    "@tanstack/react-query": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 

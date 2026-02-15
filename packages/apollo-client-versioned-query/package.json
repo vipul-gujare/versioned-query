@@ -28,12 +28,6 @@
     "url": "https://github.com/vipul-gujare/versioned-query.git",
     "directory": "packages/apollo-client-versioned-query"
   },
-  "peerDependencies": {
-    "@apollo/client": "*",
-    "graphql": "*",
-    "react": "*",
-    "rxjs": "*"
-  },
   "dependencies": {
     "@vipulgujare/create-versioned-query": "workspace:*"
   },
@@ -48,5 +42,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "graphql": "*",
+    "react": "*",
+    "rxjs": "*"
   }
 }
