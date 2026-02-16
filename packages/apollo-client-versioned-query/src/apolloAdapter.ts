@@ -1,22 +1,17 @@
-import {
-  useQuery,
-  DocumentNode,
-  TypedDocumentNode,
-  QueryHookOptions,
-  QueryResult,
-  OperationVariables,
-} from "@apollo/client";
+import { DocumentNode, TypedDocumentNode } from "@apollo/client";
+import { useQuery } from "@apollo/client/react";
+
 import type { QueryAdapter } from "@vipulgujare/create-versioned-query";
 
 export interface ApolloQueryParams {
   query: DocumentNode | TypedDocumentNode<any, any>;
   variables?: any;
-  options?: Omit<QueryHookOptions<any, any>, "query" | "variables" | "skip">;
+  options?: Omit<useQuery.Options, "query" | "variables" | "skip">;
 }
 
 export const apolloAdapter: QueryAdapter<
   ApolloQueryParams,
-  QueryResult<any, any>
+  useQuery.Result<any, any>
 > = (params, options) => {
   return useQuery(params.query, {
     variables: params.variables,
